@@ -1,3 +1,1 @@
-class LoggerConfig{
-  
-}
+class LoggerConfig {}

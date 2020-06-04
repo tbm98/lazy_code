@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lazy_code/lazy_code.dart';
+
 class SecondPage extends StatefulWidget {
   @override
   _SecondPageState createState() => _SecondPageState();

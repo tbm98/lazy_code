@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../lazy_code.dart';
 
-
 /// return a SizedBox with width = width of screen * percent / 100
 class WidthOfScreen extends StatelessWidget {
   const WidthOfScreen({@required this.percent, @required this.child})
