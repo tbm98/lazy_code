@@ -3,21 +3,27 @@ name: build and test
 jobs:
   setup:
     name: install dependencies
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         
       - name: Setup flutter
         uses: takuyaohashi/setup-flutter@v1
         with:
           flutter-version: 'latest'
           channel: 'stable'
-
-      - run: flutter doctor
-      - run: flutter pub get
-      - run: flutter clean
-      - run: set -e # abort CI if an error happens
-      - run: chmod +x ./scripts/flutter_test.sh
-      - run: ./scripts/flutter_test.sh .
-      - run: ./scripts/flutter_test.sh ./example
+      - name: Flutter prepare
+        run: |
+          flutter doctor
+          flutter pub get
+          flutter clean
+      - name: Setup shell file
+        run: |
+          set -e # abort CI if an error happens
+          chmod +x ./scripts/flutter_test.sh
+          chmod +x ./scripts/pub_login.sh
+      - name: Run test
+        run: |
+          ./scripts/flutter_test.sh .
+          ./scripts/flutter_test.sh ./example
