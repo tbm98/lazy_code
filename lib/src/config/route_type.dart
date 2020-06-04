@@ -1,0 +1,1 @@
+enum RouteType { cupertino, material }
