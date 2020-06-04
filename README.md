@@ -1,6 +1,6 @@
-# lazycode
+# lazy_code
 
-A new Flutter package.
+lazy_code helps you to speed up coding and looks cleaner in most case. It makes your code clean and easy to read and write.
 
 ## Getting Started
 
