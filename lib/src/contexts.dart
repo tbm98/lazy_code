@@ -67,4 +67,24 @@ extension ContextSupport on BuildContext {
   ThemeData get theme {
     return Theme.of(this);
   }
+
+  /// Get TextTheme data by Theme.of(context).textTheme
+  TextTheme get textTheme {
+    return Theme.of(this).textTheme;
+  }
+
+  /// Get MediaQueryData by: MediaQuery.of(this)
+  MediaQueryData get mediaQuery {
+    return MediaQuery.of(this);
+  }
+
+  /// Get FocusScopeNode by: FocusScope.of(context)
+  FocusScopeNode get focus {
+    return FocusScope.of(this);
+  }
+
+  /// hide keyboard by: if (!focus.hasPrimaryFocus) focus.unfocus();
+  void hideKeyboard() {
+    if (!focus.hasPrimaryFocus) focus.unfocus();
+  }
 }
