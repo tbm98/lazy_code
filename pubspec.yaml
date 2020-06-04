@@ -1,6 +1,6 @@
 name: lazy_code
 description: lazy_code helps you to speed up coding and looks cleaner in most case. It makes your code clean and easy to read and write.
-version: 0.1.0
+version: 0.1.0+2
 authors:
   - Tran Binh Minh <tbm98.dev@gmail.com>
 homepage: https://github.com/tbm98/lazy_code
@@ -9,7 +9,7 @@ issue_tracker: https://github.com/tbm98/lazy_code/issues
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.2"
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
