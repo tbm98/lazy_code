@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../lazy_code.dart';
-import 'config/route_type.dart';
+import '../../lazy_code.dart';
+import '../config/route_type.dart';
 
 extension ContextSupport on BuildContext {
   /************************** Get sizes *********************************/

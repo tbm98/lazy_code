@@ -1,3 +1,7 @@
+## [0.1.3] - 05/07/2020
+
+* Add Navigator's functions helper.
+
 ## [0.1.2] - 05/07/2020
 
 * Make BoxOfScreen's percent is optional.
