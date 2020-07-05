@@ -1,3 +1,7 @@
+## [0.1.5] - 05/07/2020
+
+* Add popToRoot into functions.
+
 ## [0.1.4] - 05/07/2020
 
 * Add pushReplacement.

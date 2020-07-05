@@ -69,7 +69,6 @@ extension ContextSupport on BuildContext {
   /// }
   /// ```
   /// {@end-tool}
-
   Future<dynamic> pushReplacement<TO extends Object>(
       Widget Function(BuildContext context) builder,
       {TO result}) {
