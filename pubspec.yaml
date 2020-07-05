@@ -1,8 +1,8 @@
 name: lazy_code
 description: lazy_code helps you to speed up coding and looks cleaner in most case. It makes your code clean and easy to read and write.
-version: 0.1.1+1
+version: 0.1.2
 authors:
-  - Tran Binh Minh <tbm98.dev@gmail.com>
+  - tbm98 <tbm98.dev@gmail.com>
 homepage: https://github.com/tbm98/lazy_code
 repository: https://github.com/tbm98/lazy_code
 issue_tracker: https://github.com/tbm98/lazy_code/issues

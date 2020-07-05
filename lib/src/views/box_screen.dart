@@ -3,11 +3,11 @@ import 'package:lazy_code/lazy_code.dart';
 
 /// create a SizedBox with widthPercent & heightPercent of screen
 class BoxOfScreen extends StatelessWidget {
-  const BoxOfScreen(
-      {@required this.widthPercent,
-      @required this.heightPercent,
-      @required this.child})
-      : assert(widthPercent != null && heightPercent != null && child != null);
+  const BoxOfScreen({
+    this.widthPercent = 100,
+    this.heightPercent = 100,
+    @required this.child,
+  }) : assert(widthPercent != null && heightPercent != null && child != null);
 
   final double widthPercent;
   final double heightPercent;
