@@ -53,6 +53,36 @@ extension ContextSupport on BuildContext {
     }
   }
 
+  /// Replace the current route of the navigator by pushing the given route and
+  /// then disposing the previous route once the new route has finished
+  /// animating in.
+  ///
+  /// {@macro flutter.widgets.navigator.pushReplacement}
+  ///
+  /// {@tool snippet}
+  ///
+  /// Typical usage is as follows:
+  ///
+  /// ```dart
+  /// void _doOpenPage() {
+  ///   pushReplacement(context,(context) => MyHomePage()));
+  /// }
+  /// ```
+  /// {@end-tool}
+
+  Future<dynamic> pushReplacement<TO extends Object>(
+      Widget Function(BuildContext context) builder,
+      {TO result}) {
+    if (routeTypeDefault == RouteType.cupertino) {
+      return Navigator.of(this).pushReplacement(
+          CupertinoPageRoute(builder: builder),
+          result: result);
+    } else {
+      return Navigator.of(this)
+          .pushReplacement(MaterialPageRoute(builder: builder), result: result);
+    }
+  }
+
   /// Call to Navigator.of(context).pop()
   void pop<T extends Object>([T result]) {
     Navigator.of(this).pop(result);

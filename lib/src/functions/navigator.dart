@@ -6,6 +6,12 @@ Future<dynamic> push(
   return context.push(builder);
 }
 
+Future<dynamic> pushReplacement<TO extends Object>(
+    BuildContext context, Widget Function(BuildContext context) builder,
+    {TO result}) {
+  return context.pushReplacement(builder, result: result);
+}
+
 void pop<T extends Object>(BuildContext context, [T result]) {
   context.pop(result);
 }

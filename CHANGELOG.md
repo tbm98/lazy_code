@@ -1,3 +1,7 @@
+## [0.1.4] - 05/07/2020
+
+* Add pushReplacement.
+
 ## [0.1.3] - 05/07/2020
 
 * Add Navigator's functions helper.
