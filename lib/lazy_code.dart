@@ -15,4 +15,4 @@ export 'src/views/width_screen.dart';
 export 'src/views/height_screen.dart';
 export 'src/config/config.dart';
 
-export 'src/functions/navigator.dart';
+export 'src/functions/navigators.dart';

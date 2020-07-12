@@ -1,3 +1,7 @@
+## [0.1.6] - 12/07/2020
+
+* Add some Navigator's functions.
+
 ## [0.1.5] - 05/07/2020
 
 * Add popToRoot into functions.
