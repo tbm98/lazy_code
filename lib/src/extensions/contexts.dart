@@ -36,20 +36,19 @@ extension ContextSupport on BuildContext {
   /************************** Actions *********************************/
 
   /// Call to navigator.of(context).push()
-  /// and use CupertinoPageRoute by default
-  /// because I prefer to use Cupertino over material :D
   ///
   /// ex: context.push((context)=>SecondPage());
   ///
   /// you can call setRouteTypeDefault(RouteType type) to
   /// set default to MaterialPageRoute or CupertinoPageRoute
-  ///
-  /// by default: I use CupertinoPageRoute
-  Future<dynamic> push(Widget Function(BuildContext context) builder) {
+  Future<dynamic> push(Widget Function(BuildContext context) builder,
+      {String name}) {
     if (routeTypeDefault == RouteType.cupertino) {
-      return Navigator.of(this).push(CupertinoPageRoute(builder: builder));
+      return Navigator.of(this).push(CupertinoPageRoute(
+          builder: builder, settings: RouteSettings(name: name)));
     } else {
-      return Navigator.of(this).push(MaterialPageRoute(builder: builder));
+      return Navigator.of(this).push(MaterialPageRoute(
+          builder: builder, settings: RouteSettings(name: name)));
     }
   }
 

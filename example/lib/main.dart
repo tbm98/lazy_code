@@ -51,12 +51,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              color: Colors.red,
-              child: const BoxOfScreen(
-                widthPercent: 30,
-                heightPercent: 30,
-                child: Center(child: Text('hi')),
+            BoxOfScreen(
+              widthPercent: 30,
+              heightPercent: 30,
+              child: Container(
+                color: Colors.red,
+                // this is box of widget parent
+                child: BoxOfWidget(
+                  widthPercent: 30,
+                  heightPercent: 30,
+                  child: Container(
+                    color: Colors.yellow,
+                    child: Center(child: Text('hi')),
+                  ),
+                ),
               ),
             ),
             Container(),

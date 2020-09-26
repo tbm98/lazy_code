@@ -1,6 +1,6 @@
 import 'route_type.dart';
 
-RouteType _routeTypeDefault = RouteType.cupertino;
+RouteType _routeTypeDefault = RouteType.material;
 
 RouteType get routeTypeDefault => _routeTypeDefault;
 

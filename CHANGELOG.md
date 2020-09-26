@@ -1,3 +1,7 @@
+## [0.2.0] - 26/09/2020
+
+* Add support to FractionallySizedBox, add parameter String name (RouteSetting#name) in context.push.
+
 ## [0.1.6] - 12/07/2020
 
 * Add some Navigator's functions.

@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:lazy_code/src/extensions/contexts.dart';
 
 /// Call to navigator.of(context).push()
-/// and use CupertinoPageRoute by default
-/// because I prefer to use Cupertino over material :D
+/// and use MaterialPageRoute by default
 ///
 /// ex: context.push((context)=>SecondPage());
 ///
 /// you can call setRouteTypeDefault(RouteType type) to
 /// set default to MaterialPageRoute or CupertinoPageRoute
-///
-/// by default: I use CupertinoPageRoute
 Future<dynamic> push(
-    BuildContext context, Widget Function(BuildContext context) builder) {
-  return context.push(builder);
+    BuildContext context, Widget Function(BuildContext context) builder,
+    {String name}) {
+  return context.push(builder, name: name);
 }
 
 /// Call to Navigator.of(context).popUntil => route.isFirst
